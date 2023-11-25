@@ -262,6 +262,7 @@ CREATE TABLE `tbl_student` (
   `STUDENT_ID` varchar(30) NOT NULL,
   `FIRST_NAME` varchar(30) NOT NULL,
   `LAST_NAME` varchar(30) NOT NULL,
+  `MOBILE` varchar(11),
   `COURSE` varchar(30) NOT NULL,
   `PASSWORD` varchar(30) NOT NULL,
   `IMAGE` text,
@@ -273,8 +274,8 @@ CREATE TABLE `tbl_student` (
 -- Dumping data for table `tbl_student`
 --
 
-INSERT INTO `tbl_student` (`STUDENT_ID`, `FIRST_NAME`, `LAST_NAME`, `COURSE`, `PASSWORD`, `IMAGE`, `STATUS`, `DATE`) VALUES
-('00522', 'Kriztian', 'Eris', 'BSIT', 'pass123', NULL, 'Registered', '2019-05-28 03:08 PM');
+INSERT INTO `tbl_student` (`STUDENT_ID`, `FIRST_NAME`, `LAST_NAME`,`MOBILE`, `COURSE`, `PASSWORD`, `IMAGE`, `STATUS`, `DATE`) VALUES
+('00522', 'Kriztian', 'Eris','12312312301', 'BSIT', 'pass123', NULL, 'Registered', '2019-05-28 03:08 PM');
 
 -- --------------------------------------------------------
 

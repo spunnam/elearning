@@ -11,7 +11,7 @@
 
 <body>
 	<!-- LOGIN -->
-	<div style="padding-top:20vh">
+	<div class="main-login-container">
 		<div class="login-container">
 			<!-- LOGIN HEADER -->
 			<div class="login-header">
@@ -25,13 +25,13 @@
 				<form method="post" id="loginForm" class="login-form">
 					<div class="login-form-group">
 						<label>Username</label>
-						<input type="text" name="userid" value="" class="form-input" id="userid"
-							placeholder="StudentID or FacultyID..." REQUIRED>
+						<input type="text" name="userid" value="" class="form-input" id="userid" placeholder="Username"
+							REQUIRED>
 					</div>
 					<div class="login-form-group">
 						<label>Password</label>
 						<input type="password" name="password" value="" class="form-input" id="password"
-							placeholder="Password..." REQUIRED>
+							placeholder="Password" REQUIRED>
 					</div>
 					<div class="login-button">
 						<button type="login" name="login" class="button button5">Login</button>

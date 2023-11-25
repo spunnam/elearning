@@ -1,5 +1,5 @@
 <?php include '../assets/includes/header.php'; ?>
-
+<?php $id = $_GET['id']; ?>
 <!-- DIRECTORY -->
 <div class="main-dir">
 	<h1>Classes</h1>
@@ -13,11 +13,6 @@
 			<div class="panel back-color-white">
 				<div class="panel-header-norm">
 					<h2>Classes</h2>
-					<a href="classes-student.php"><button class="button-header back-color-rb">Add
-							Class</button></a>
-				</div>
-				<div>
-
 				</div>
 				<div class="panel-content-norm">
 					<table class="action-table" id="classTable">
@@ -28,7 +23,7 @@
 							<th>School Year</th>
 							<th>Action</th>
 						</tr>
-						<?php $el->getClassesStudent($user); ?>
+						<?php $el->getClassesForStudent($id); ?>
 					</table>
 				</div>
 			</div>

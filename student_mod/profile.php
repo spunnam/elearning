@@ -2,7 +2,9 @@
 
 <!-- DIRECTORY -->
 <div class="main-dir">
-	<h1><?php echo ucwords($userName); ?></h1>
+	<h1>
+		<?php echo ucwords($userName); ?>
+	</h1>
 </div>
 <!-- END DIRECTORY -->
 
@@ -30,11 +32,16 @@
 							<input type="text" value="<?php echo $lname; ?>" id="lastName" disabled required>
 						</div>
 						<div>
+							<label class="data-name">Mobile:</label>
+							<input type="text" value="<?php echo $mobile; ?>" id="mobile" disabled required>
+						</div>
+						<div>
 							<label class="data-name">Course:</label>
 							<input type="text" value="<?php echo $course; ?>" id="course" disabled required>
 						</div>
 						<div class="col-btn">
-							<a class="data-link" href="profile_edit.php?id=<?php echo $id; ?>&action=select-student">Change Password</a>
+							<a class="data-link"
+								href="profile_edit.php?id=<?php echo $id; ?>&action=select-student">Change Password</a>
 						</div>
 					</form>
 				</div>
