@@ -33,10 +33,11 @@ function setRegisterStudent(e){
 	var userid = document.getElementById('userid').value;
 	var fname = document.getElementById('fname').value;
 	var lname = document.getElementById('lname').value;
+	var mobile = document.getElementById('mobile').value;
 	var course = document.getElementById('course').value;
 	var pass = document.getElementById('password').value;
 	var cpass = document.getElementById('confirm-password').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);
@@ -52,6 +53,7 @@ function setRegisterStudent(e){
 				document.getElementById('userid').value = "";
 				document.getElementById('fname').value = "";
 				document.getElementById('lname').value = "";
+				document.getElementById('mobile').value = "";
 				document.getElementById('course').value = "";
 				document.getElementById('password').value = "";
 				document.getElementById('confirm-password').value = "";
@@ -151,10 +153,11 @@ function setStudent(e){
 	var userid = document.getElementById('studentID').value;
 	var fname = document.getElementById('firstName').value;
 	var lname = document.getElementById('lastName').value;
+	var mobile = document.getElementById('mobile').value;
 	var course = document.getElementById('course').value;
 	var pass = document.getElementById('password').value;
 	var cpass = document.getElementById('confirmPassword').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+ "&mobile="+mobile+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);
@@ -688,10 +691,11 @@ function cpStudent(e){
 	var userid = document.getElementById('studentID').value;
 	var fname = document.getElementById('firstName').value;
 	var lname = document.getElementById('lastName').value;
+	var mobile = document.getElementById('mobile').value;
 	var course = document.getElementById('course').value;
 	var pass = document.getElementById('password').value;
 	var cpass = document.getElementById('confirmPassword').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);
