@@ -39,9 +39,14 @@
 					</div>
 					<div class="register-form-group">
 						<label>Mobile</label>
-						<input type="number" name="mobile" class="form-input" id="mobile" placeholder="Mobile number"
+						<input type="tel" name="mobile" class="form-input" id="mobile" placeholder="Mobile number"
 							required pattern="[0-9]+" maxlength="11" required>
 					</div>
+					<div class="register-form-group">
+						<label>Date of Birth</label>
+						<input type="date" name="dob" class="form-input" id="dob" placeholder="Date of Birth" required>
+					</div>
+
 					<div class="register-form-group">
 						<label>Course</label>
 						<input type="text" name="course" class="form-input" id="course" placeholder="Course" required>

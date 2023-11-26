@@ -22,6 +22,7 @@
 							<th>First Name</th>
 							<th>Last Name</th>
 							<th>Mobile</th>
+							<th>DOB</th>
 							<th>Course</th>
 							<th>Action</th>
 						</tr>
