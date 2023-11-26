@@ -376,7 +376,7 @@ if ($_GET['action'] == "select-faculty") {
 
 if ($_GET['action'] == "select-student") {
 	$id = $_GET['id'];
-	list($id, $fname, $lname, $course, $password) = $el->getStudentID($id);
+	list($id, $fname, $lname, $mobile, $course, $password) = $el->getStudentID($id);
 }
 
 if ($_GET['action'] == "select-subject") {
