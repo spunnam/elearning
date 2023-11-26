@@ -91,14 +91,16 @@ class elearning
 		}
 	}
 
-	public function setStudentInfo($userid, $first_name, $last_name, $course, $password, $date)
+	public function setStudentInfo($userid, $first_name, $last_name, $mobile, $dob, $course, $password, $date)
 	{
 		try {
-			if (!empty($userid) && !empty($first_name) && !empty($last_name) && !empty($course) && !empty($password) && !empty($password)) {
-				$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, COURSE, `PASSWORD`, STATUS, DATE) VALUES(:userid, :firstname, :lastname, :course, :password, 'Registered', :date)");
+			if (!empty($userid) && !empty($first_name) && !empty($last_name) && !empty($mobile) && !empty($dob) && !empty($course) && !empty($password) && !empty($password)) {
+				$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, MOBILE, DOB, COURSE, `PASSWORD`, STATUS, DATE) VALUES(:userid, :firstname, :lastname,:mobile,:dob, :course, :password, 'Registered', :date)");
 				$stmt->bindValue(':userid', $userid);
 				$stmt->bindValue(':firstname', $first_name);
 				$stmt->bindValue(':lastname', $last_name);
+				$stmt->bindValue(':mobile', $mobile);
+				$stmt->bindValue(':dob', $dob);
 				$stmt->bindValue(':course', $course);
 				$stmt->bindValue(':password', $password);
 				$stmt->bindValue(':date', $date);
@@ -302,9 +304,10 @@ class elearning
 				$first_name = htmlentities($row['FIRST_NAME']);
 				$last_name = htmlentities($row['LAST_NAME']);
 				$mobile = htmlentities($row['MOBILE']);
+				$dob = htmlentities($row['DOB']);
 				$course = htmlentities($row['COURSE']);
 
-				echo "<tr><td>" . $sid . "</td><td>" . $first_name . "</td><td>" . $last_name . "</td><td>" . $mobile . "</td><td>" . $course . "</td><td><a href='student_edit.php?id=" . $sid . "&action=select-student'><img src='../assets/img/pencil.png'> Edit</a><a href='student.php?id=" . $sid . "&action=deleteStudent' onclick=\"return confirm('Are you sure you want to delete?');\"><img src='../assets/img/trashcan.png'>Delete</a></td></tr>";
+				echo "<tr><td>" . $sid . "</td><td>" . $first_name . "</td><td>" . $last_name . "</td><td>" . $mobile . "</td><td>" . $dob . "</td><td>" . $course . "</td><td><a href='student_edit.php?id=" . $sid . "&action=select-student'><img src='../assets/img/pencil.png'> Edit</a><a href='student.php?id=" . $sid . "&action=deleteStudent' onclick=\"return confirm('Are you sure you want to delete?');\"><img src='../assets/img/trashcan.png'>Delete</a></td></tr>";
 			}
 
 		} catch (Exception $e) {
@@ -512,10 +515,10 @@ class elearning
 			return true;
 		}
 		/*
-																																			$row = $stmt->fetch(PDO::FETCH_ASSOC);
-																																			$id = htmlentities($row['STUDENT_ID']);
-																																			RETURN true;
-																																			*/
+																																							  $row = $stmt->fetch(PDO::FETCH_ASSOC);
+																																							  $id = htmlentities($row['STUDENT_ID']);
+																																							  RETURN true;
+																																							  */
 	}
 
 	public function isClassCode($classcode)

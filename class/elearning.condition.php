@@ -25,6 +25,7 @@ if ($_POST['action'] == "register-student") {
 	$fname = htmlspecialchars($_POST["fname"]);
 	$lname = htmlspecialchars($_POST["lname"]);
 	$mobile = htmlspecialchars($_POST["mobile"]);
+	$dob = htmlspecialchars($_POST["dob"]);
 	$course = htmlspecialchars($_POST["course"]);
 	$password = htmlspecialchars($_POST["password"]);
 	$confirm_pass = htmlspecialchars($_POST["confirm-password"]);
@@ -35,7 +36,7 @@ if ($_POST['action'] == "register-student") {
 	} elseif ($confirm_pass !== $password) {
 		echo 'Password not match!';
 	} else {
-		$el->setStudent($userid, $fname, $lname, $mobile, $course, $password, $date);
+		$el->setStudent($userid, $fname, $lname, $mobile, $dob, $course, $password, $date);
 	}
 }
 
@@ -169,7 +170,8 @@ if ($_POST['action'] == "create-student") {
 	$fname = htmlspecialchars($_POST["fname"]);
 	$lname = htmlspecialchars($_POST["lname"]);
 	$mobile = htmlspecialchars($_POST["mobile"]);
-	$course = htmlspecialchars($_POST["course"]);
+	$mobile = htmlspecialchars($_POST["mobile"]);
+	$dob = htmlspecialchars($_POST["dob"]);
 	$password = htmlspecialchars($_POST["password"]);
 	$confirm_pass = htmlspecialchars($_POST["confirm-password"]);
 	$action = "added new student " . $fname . ' ' . $lname;
@@ -179,7 +181,7 @@ if ($_POST['action'] == "create-student") {
 	} elseif ($confirm_pass !== $password) {
 		echo 'Password not match!';
 	} else {
-		$el->setStudent($userid, $fname, $lname, $mobile, $course, $password, $date);
+		$el->setStudent($userid, $fname, $lname, $mobile, $dob, $course, $password, $date);
 		$el->setActivityLog($user, $action, $date);
 	}
 }
