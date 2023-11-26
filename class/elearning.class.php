@@ -515,10 +515,10 @@ class elearning
 			return true;
 		}
 		/*
-																																							  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-																																							  $id = htmlentities($row['STUDENT_ID']);
-																																							  RETURN true;
-																																							  */
+																																									$row = $stmt->fetch(PDO::FETCH_ASSOC);
+																																									$id = htmlentities($row['STUDENT_ID']);
+																																									RETURN true;
+																																									*/
 	}
 
 	public function isClassCode($classcode)
@@ -1248,14 +1248,15 @@ WHERE STUDENT_ID NOT IN (SELECT STUDENT_ID FROM tbl_class_student WHERE CLASS_ID
 		}
 	}
 
-	public function setStudent($userid, $first_name, $last_name, $mobile, $course, $password, $date)
+	public function setStudent($userid, $first_name, $last_name, $mobile, $dob, $course, $password, $date)
 	{
 		try {
-			$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, MOBILE, COURSE, `PASSWORD`, STATUS, `DATE`) VALUES(:userid, :firstname, :lastname,:mobile, :course, :password, 'Registered', :date)");
+			$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, MOBILE, DOB, COURSE, `PASSWORD`, STATUS, `DATE`) VALUES(:userid, :firstname, :lastname,:mobile,:dob, :course, :password, 'Registered', :date)");
 			$stmt->bindValue(':userid', $userid);
 			$stmt->bindValue(':firstname', $first_name);
 			$stmt->bindValue(':lastname', $last_name);
 			$stmt->bindValue(':mobile', $mobile);
+			$stmt->bindValue(':dob', $dob);
 			$stmt->bindValue(':course', $course);
 			$stmt->bindValue(':password', $password);
 			$stmt->bindValue(':date', $date);
