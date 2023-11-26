@@ -36,8 +36,16 @@
 							<input type="text" value="<?php echo $mobile; ?>" id="mobile" disabled required>
 						</div>
 						<div>
+							<label class="data-name">Date of Birth:</label>
+							<input type="text" value="<?php echo $dob; ?>" id="dob" disabled required>
+						</div>
+						<div>
 							<label class="data-name">Course:</label>
 							<input type="text" value="<?php echo $course; ?>" id="course" disabled required>
+						</div>
+						<div>
+							<label class="data-name">Program:</label>
+							<input type="text" value="<?php echo $program; ?>" id="program" disabled required>
 						</div>
 						<div class="col-btn">
 							<a class="data-link"

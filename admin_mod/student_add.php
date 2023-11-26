@@ -34,6 +34,10 @@
 							<input type="tel" id="mobile" pattern="[0-9]+" maxlength="11" required>
 						</div>
 						<div>
+							<label class="data-name">Date of birth:</label>
+							<input type="date" id="dob" required>
+						</div>
+						<div>
 							<label class="data-name">Course:</label>
 							<input type="text" id="course" required>
 						</div>
