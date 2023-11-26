@@ -512,10 +512,10 @@ class elearning
 			return true;
 		}
 		/*
-																																			$row = $stmt->fetch(PDO::FETCH_ASSOC);
-																																			$id = htmlentities($row['STUDENT_ID']);
-																																			RETURN true;
-																																			*/
+																																																		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+																																																		$id = htmlentities($row['STUDENT_ID']);
+																																																		RETURN true;
+																																																		*/
 	}
 
 	public function isClassCode($classcode)
@@ -1146,9 +1146,15 @@ class elearning
 				$sid = htmlentities($row['STUDENT_ID']);
 				$fname = htmlentities($row['FIRST_NAME']);
 				$lname = htmlentities($row['LAST_NAME']);
+				$mobile = htmlentities($row['MOBILE']);
 				$course = htmlentities($row['COURSE']);
+				echo "<tr><td>" . $sid . "</td>";
+				echo "<td>" . $fname . " " . $lname . "</td>";
+				echo "<td>" . $mobile . "</td>";
+				echo "<td>" . $course . "</td>";
+				echo "<td><a href='students.php?id=" . $id . "&sid=" . $sid . "&action=deleteClassStudent'><img src='../assets/img/trashcan.png'>Remove</a></td></tr>";
 
-				echo "<tr><td>" . $sid . "</td><td>" . $fname . " " . $lname . "</td><td>" . $course . "</td><td><a href='students.php?id=" . $id . "&sid=" . $sid . "&action=deleteClassStudent'><img src='../assets/img/trashcan.png'>Remove</a></td></tr>";
+				// echo "<tr><td>" . $sid . "</td><td>" . $fname . " " . $lname . "</td><td>" ."</td><td>" . $course . "</td><td><a href='students.php?id=" . $id . "&sid=" . $sid . "&action=deleteClassStudent'><img src='../assets/img/trashcan.png'>Remove</a></td></tr>";
 			}
 		} catch (Exception $e) {
 			echo "Something went wrong!";
@@ -1184,9 +1190,10 @@ class elearning
 				$sid = htmlentities($row['STUDENT_ID']);
 				$fname = htmlentities($row['FIRST_NAME']);
 				$lname = htmlentities($row['LAST_NAME']);
+				$mobile = htmlentities($row['MOBILE']);
 				$course = htmlentities($row['COURSE']);
 
-				echo "<tr><td>" . $sid . "</td><td>" . $fname . " " . $lname . "</td><td>" . $course . "</td><td><a href='classes_students.php?id=" . $id . "&sid=" . $sid . "&action=deleteClassStudent'><img src='../assets/img/trashcan.png'>Remove</a></td></tr>";
+				echo "<tr><td>" . $sid . "</td><td>" . $fname . " " . $lname . "</td><td>" . $mobile . "</td><td>" . $course . "</td><td><a href='classes_students.php?id=" . $id . "&sid=" . $sid . "&action=deleteClassStudent'><img src='../assets/img/trashcan.png'>Remove</a></td></tr>";
 			}
 		} catch (Exception $e) {
 			echo "Something went wrong!";
@@ -1204,9 +1211,13 @@ WHERE STUDENT_ID NOT IN (SELECT STUDENT_ID FROM tbl_class_student WHERE CLASS_ID
 				$sid = htmlentities($row['STUDENT_ID']);
 				$fname = htmlentities($row['FIRST_NAME']);
 				$lname = htmlentities($row['LAST_NAME']);
+				$mobile = htmlentities($row['MOBILE']);
 				$course = htmlentities($row['COURSE']);
-
-				echo "<tr><td>" . $sid . "</td><td>" . $fname . " " . $lname . "</td><td>" . $course . "</td><td><a href='classes_students.php?id=" . $id . "&sid=" . $sid . "&action=addToClass'><img src='../assets/img/plus.png'>Add Student</a></td></tr>";
+				echo "<tr><td>" . $sid . "</td>";
+				echo "<td>" . $fname . " " . $lname . "</td>";
+				echo "<td>" . $mobile . "</td>";
+				echo "<td>" . $course . "</td>";
+				echo "<td><a href='classes_students.php?id=" . $id . "&sid=" . $sid . "&action=addToClass'><img src='../assets/img/plus.png'>Add Student</a></td></tr>";
 			}
 		} catch (Exception $e) {
 			echo "Something went wrong!";
@@ -1577,10 +1588,11 @@ WHERE STUDENT_ID NOT IN (SELECT STUDENT_ID FROM tbl_class_student WHERE CLASS_ID
 			$id = $row['STUDENT_ID'];
 			$fname = $row['FIRST_NAME'];
 			$lname = $row['LAST_NAME'];
+			$mobile = $row['MOBILE'];
 			$course = $row['COURSE'];
 			$password = $row['PASSWORD'];
 
-			return array($id, $fname, $lname, $course, $password);
+			return array($id, $fname, $lname, $mobile, $course, $password);
 		} catch (Exception $e) {
 			echo "Something went wrong ! \n" . $e->getMessage();
 		}
