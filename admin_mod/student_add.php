@@ -41,6 +41,14 @@
 							<label class="data-name">Course:</label>
 							<input type="text" id="course" required>
 						</div>
+						<div class="register-form-group">
+							<label>Program</label>
+							<select name="program" class="form-input form-input-dropdwon" id="program" required>
+								<option value="Graduate">Graduate</option>
+								<option value="Undergraduate">Undergraduate</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
 						<div>
 							<label class="data-name">Password:</label>
 							<input type="password" id="password" required>
