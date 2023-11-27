@@ -24,6 +24,7 @@
 							<th>Mobile</th>
 							<th>DOB</th>
 							<th>Course</th>
+							<th>Program</th>
 							<th>Action</th>
 						</tr>
 						<?php $el->getStudentsAd(); ?>

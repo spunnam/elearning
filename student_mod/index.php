@@ -1,29 +1,40 @@
 <?php include '../assets/includes/header.php'; ?>
-			
-			<!-- DIRECTORY -->
-			<div class="main-dir">
-				<h1>E-LEARNING SYSTEM</h1>
-			</div>
-			<!-- END DIRECTORY -->
-			
-			<!-- CONTAINER -->
-			<div class="main-container">
-				<div class="inner-container">
-					<div class="content-row">
-						<div class="panel back-color-white">
-						<div class="panel-content-norm">
-						<div style="display:inline-block;">
-							<img src="../assets/img/home.jpg" width="500px" style="float:left; padding-right:20px;">
-							eLearning is learning utilizing electronic technologies to access educational curriculum outside of a traditional classroom. There are many terms used to describe learning that is delivered online, via the internet, ranging from Distance Education, to computerized electronic learning, online learning, internet learning and many others. We define eLearning as courses that are specifically delivered via the internet to somewhere other than the classroom where the professor is teaching.
-Kaila De Vera
-It is interactive in that you can also communicate with your teachers, professors or other students in your class. Sometimes it is delivered live, where you can “electronically” raise your hand and interact in real time and sometimes it is a lecture that has been prerecorded. There is always a teacher or professor interacting /communicating with you and grading your participation, your assignments and your tests
-							
-						</div>
-						</div>
-						</div>
+
+<!-- DIRECTORY -->
+<div class="main-dir">
+	<h1>E-LEARNING SYSTEM</h1>
+</div>
+<!-- END DIRECTORY -->
+
+<!-- CONTAINER -->
+<div class="main-container">
+	<div class="inner-container">
+		<div class="content-row">
+			<div class="panel back-color-white">
+				<div class="panel-content-norm">
+					<div style="display:inline-block;">
+						<img src="../assets/img/home.jpg" width="500px" style="float:left; padding-right:20px;">
+						eLearning refers to the use of electronic technologies to access educational curriculum beyond
+						the traditional classroom setting. Various terms such as Distance Education, computerized
+						electronic learning, online learning, and internet learning are used interchangeably to describe
+						this form of education. In our definition, eLearning comprises courses specifically delivered
+						via the internet, reaching learners outside the physical classroom where the instructor is
+						present.
+						</br>
+						</br>
+
+						Interactive by nature, eLearning allows communication with teachers, professors, or fellow
+						students. It offers real-time engagement, allowing participants to electronically participate,
+						ask questions, and interact during live sessions. Additionally, content delivery may include
+						prerecorded lectures. Throughout the learning experience, a teacher or professor remains
+						actively involved, providing feedback on participation, assignments, and assessments.
+
 					</div>
 				</div>
 			</div>
-			<!-- END CONTAINER -->
+		</div>
+	</div>
+</div>
+<!-- END CONTAINER -->
 
 <?php include '../assets/includes/footer.php'; ?>

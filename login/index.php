@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/a8ca283586.js" crossorigin="anonymous"></script>
 	<title>eLearning</title>
 	<link rel="stylesheet" type="text/css" href="../assets/styles/elearning.public.css?<?php echo time(); ?>">
 </head>
@@ -22,13 +23,17 @@
 			<!-- LOGIN CONTENT -->
 			<div class="login-content">
 				<span class="error" id="error"></span>
+				<h1 class="login-title">Login</h1>
+				<h4 class="login-desc">Please login to your account</h4>
 				<form method="post" id="loginForm" class="login-form">
 					<div class="login-form-group">
+						<i class="fa-solid fa-user"></i>
 						<label>Username</label>
 						<input type="text" name="userid" value="" class="form-input" id="userid" placeholder="Username"
 							REQUIRED>
 					</div>
 					<div class="login-form-group">
+						<i class="fa-solid fa-lock"></i>
 						<label>Password</label>
 						<input type="password" name="password" value="" class="form-input" id="password"
 							placeholder="Password" REQUIRED>

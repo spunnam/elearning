@@ -91,17 +91,18 @@ class elearning
 		}
 	}
 
-	public function setStudentInfo($userid, $first_name, $last_name, $mobile, $dob, $course, $password, $date)
+	public function setStudentInfo($userid, $first_name, $last_name, $mobile, $dob, $course, $program, $password, $date)
 	{
 		try {
 			if (!empty($userid) && !empty($first_name) && !empty($last_name) && !empty($mobile) && !empty($dob) && !empty($course) && !empty($password) && !empty($password)) {
-				$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, MOBILE, DOB, COURSE, `PASSWORD`, STATUS, DATE) VALUES(:userid, :firstname, :lastname,:mobile,:dob, :course, :password, 'Registered', :date)");
+				$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, MOBILE, DOB, COURSE,PROGRAM, `PASSWORD`, STATUS, DATE) VALUES(:userid, :firstname, :lastname,:mobile,:dob, :course,:program, :password, 'Registered', :date)");
 				$stmt->bindValue(':userid', $userid);
 				$stmt->bindValue(':firstname', $first_name);
 				$stmt->bindValue(':lastname', $last_name);
 				$stmt->bindValue(':mobile', $mobile);
 				$stmt->bindValue(':dob', $dob);
 				$stmt->bindValue(':course', $course);
+				$stmt->bindValue(':program', $program);
 				$stmt->bindValue(':password', $password);
 				$stmt->bindValue(':date', $date);
 				$stmt->execute();
@@ -306,8 +307,9 @@ class elearning
 				$mobile = htmlentities($row['MOBILE']);
 				$dob = htmlentities($row['DOB']);
 				$course = htmlentities($row['COURSE']);
+				$program = htmlentities($row['PROGRAM']);
 
-				echo "<tr><td>" . $sid . "</td><td>" . $first_name . "</td><td>" . $last_name . "</td><td>" . $mobile . "</td><td>" . $dob . "</td><td>" . $course . "</td><td><a href='student_edit.php?id=" . $sid . "&action=select-student'><img src='../assets/img/pencil.png'> Edit</a><a href='student.php?id=" . $sid . "&action=deleteStudent' onclick=\"return confirm('Are you sure you want to delete?');\"><img src='../assets/img/trashcan.png'>Delete</a></td></tr>";
+				echo "<tr><td>" . $sid . "</td><td>" . $first_name . "</td><td>" . $last_name . "</td><td>" . $mobile . "</td><td>" . $dob . "</td><td>" . $course . "</td><td>" . $program . "</td><td><a href='student_edit.php?id=" . $sid . "&action=select-student'><img src='../assets/img/pencil.png'> Edit</a><a href='student.php?id=" . $sid . "&action=deleteStudent' onclick=\"return confirm('Are you sure you want to delete?');\"><img src='../assets/img/trashcan.png'>Delete</a></td></tr>";
 			}
 
 		} catch (Exception $e) {
@@ -515,10 +517,10 @@ class elearning
 			return true;
 		}
 		/*
-  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-	$id = htmlentities($row['STUDENT_ID']);
-	RETURN true;
-*/
+															  $row = $stmt->fetch(PDO::FETCH_ASSOC);
+																$id = htmlentities($row['STUDENT_ID']);
+																RETURN true;
+															*/
 	}
 
 	public function isClassCode($classcode)
@@ -1259,16 +1261,17 @@ WHERE STUDENT_ID NOT IN (SELECT STUDENT_ID FROM tbl_class_student WHERE CLASS_ID
 		}
 	}
 
-	public function setStudent($userid, $first_name, $last_name, $mobile, $dob, $course, $password, $date)
+	public function setStudent($userid, $first_name, $last_name, $mobile, $dob, $course, $program, $password, $date)
 	{
 		try {
-			$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, MOBILE, DOB, COURSE, `PASSWORD`, STATUS, `DATE`) VALUES(:userid, :firstname, :lastname,:mobile,:dob, :course, :password, 'Registered', :date)");
+			$stmt = $this->DB->prepare("INSERT INTO tbl_student(STUDENT_ID, FIRST_NAME, LAST_NAME, MOBILE, DOB, COURSE,PROGRAM, `PASSWORD`, STATUS, `DATE`) VALUES(:userid, :firstname, :lastname,:mobile,:dob, :course,:program, :password, 'Registered', :date)");
 			$stmt->bindValue(':userid', $userid);
 			$stmt->bindValue(':firstname', $first_name);
 			$stmt->bindValue(':lastname', $last_name);
 			$stmt->bindValue(':mobile', $mobile);
 			$stmt->bindValue(':dob', $dob);
 			$stmt->bindValue(':course', $course);
+			$stmt->bindValue(':program', $program);
 			$stmt->bindValue(':password', $password);
 			$stmt->bindValue(':date', $date);
 			$stmt->execute();
@@ -1420,13 +1423,15 @@ WHERE STUDENT_ID NOT IN (SELECT STUDENT_ID FROM tbl_class_student WHERE CLASS_ID
 		}
 	}
 
-	public function editStudent($userid, $first_name, $last_name, $course, $password, $date)
+	public function editStudent($userid, $first_name, $last_name, $mobile, $dob, $course, $password, $date)
 	{
 		try {
-			$stmt = $this->DB->prepare("UPDATE tbl_student SET STUDENT_ID = :userid, FIRST_NAME = :firstname, LAST_NAME = :lastname, COURSE = :course, PASSWORD = :password, `DATE` = :date WHERE STUDENT_ID = :userid");
+			$stmt = $this->DB->prepare("UPDATE tbl_student SET STUDENT_ID = :userid, FIRST_NAME = :firstname, LAST_NAME = :lastname, MOBILE = :mobile, DOB = :dob, COURSE = :course, PASSWORD = :password, `DATE` = :date WHERE STUDENT_ID = :userid");
 			$stmt->bindValue(':userid', $userid);
 			$stmt->bindValue(':firstname', $first_name);
 			$stmt->bindValue(':lastname', $last_name);
+			$stmt->bindValue(':mobile', $mobile);
+			$stmt->bindValue(':dob', $dob);
 			$stmt->bindValue(':course', $course);
 			$stmt->bindValue(':password', $password);
 			$stmt->bindValue(':date', $date);
@@ -1583,7 +1588,7 @@ WHERE STUDENT_ID NOT IN (SELECT STUDENT_ID FROM tbl_class_student WHERE CLASS_ID
 		}
 	}
 
-	public function getStudentID($id)
+	public function getStudentID($id) //Fetches data of student in profile
 	{
 		try {
 			$stmt = $this->DB->prepare("SELECT * FROM tbl_student WHERE STUDENT_ID = :id");
@@ -1593,10 +1598,12 @@ WHERE STUDENT_ID NOT IN (SELECT STUDENT_ID FROM tbl_class_student WHERE CLASS_ID
 			$fname = $row['FIRST_NAME'];
 			$lname = $row['LAST_NAME'];
 			$mobile = $row['MOBILE'];
+			$dob = $row['DOB'];
 			$course = $row['COURSE'];
+			$program = $row['PROGRAM'];
 			$password = $row['PASSWORD'];
 
-			return array($id, $fname, $lname, $mobile, $course, $password);
+			return array($id, $fname, $lname, $mobile, $dob, $course, $program, $password);
 		} catch (Exception $e) {
 			echo "Something went wrong ! \n" . $e->getMessage();
 		}

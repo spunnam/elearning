@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>KaiLearning</title>
+	<title>eLearning</title>
 	<link rel="stylesheet" type="text/css" href="../assets/styles/elearning.public.css?<?php echo time(); ?>">
 </head>
 
@@ -51,7 +51,14 @@
 						<label>Course</label>
 						<input type="text" name="course" class="form-input" id="course" placeholder="Course" required>
 					</div>
-
+					<div class="register-form-group">
+						<label>Program</label>
+						<select name="program" class="form-input form-input-dropdwon" id="program" required>
+							<option value="Graduate">Graduate</option>
+							<option value="Undergraduate">Undergraduate</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
 					<div class="register-form-group">
 						<label>Password</label>
 						<input type="password" name="password" class="form-input" id="password" placeholder="Password"

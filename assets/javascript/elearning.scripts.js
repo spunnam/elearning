@@ -36,9 +36,10 @@ function setRegisterStudent(e){
 	var mobile = document.getElementById('mobile').value;
 	var dob = document.getElementById('dob').value;
 	var course = document.getElementById('course').value;
+	var program = document.getElementById('program').value;
 	var pass = document.getElementById('password').value;
 	var cpass = document.getElementById('confirm-password').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&dob="+dob+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&dob="+dob+"&course="+course+"&program="+program+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);
@@ -158,9 +159,10 @@ function setStudent(e){
 	var mobile = document.getElementById('mobile').value;
 	var dob = document.getElementById('dob').value;
 	var course = document.getElementById('course').value;
+	var program = document.getElementById('program').value;
 	var pass = document.getElementById('password').value;
 	var cpass = document.getElementById('confirmPassword').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+ "&mobile="+mobile+"&dob="+dob+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+ "&mobile="+mobile+"&dob="+dob+"&course="+course+"&program="+program+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);
@@ -421,10 +423,12 @@ function editStudent(e){
 	var userid = document.getElementById('studentID').value;
 	var fname = document.getElementById('firstName').value;
 	var lname = document.getElementById('lastName').value;
+	var mobile = document.getElementById('mobile').value;
+	var dob = document.getElementById('dob').value;
 	var course = document.getElementById('course').value;
 	var pass = document.getElementById('password').value;
 	var cpass = document.getElementById('confirmPassword').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&dob="+dob+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);
@@ -697,9 +701,10 @@ function cpStudent(e){
 	var mobile = document.getElementById('mobile').value;
 	var dob = document.getElementById('dob').value;
 	var course = document.getElementById('course').value;
-	var pass = document.getElementById('password').value;
+	var course = document.getElementById('course').value;
+	var program = document.getElementById('program').value;
 	var cpass = document.getElementById('confirmPassword').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&dob="+dob+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&dob="+dob+"&course="+course+"&program="+program+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);
