@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 27, 2023 at 02:26 AM
+-- Generation Time: Nov 30, 2023 at 09:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -184,7 +184,64 @@ INSERT INTO `tbl_activity_log` (`ID`, `USER_ID`, `ACTION`, `DATE`) VALUES
 (601, '0001', 'uploaded an assignment report (1).csv', '2023-11-27 02:22 AM'),
 (602, '0001', 'posted a new announcement ', '2023-11-27 02:23 AM'),
 (603, '0001', 'created a new quiz ', '2023-11-27 02:23 AM'),
-(604, '0001', 'created a new question ', '2023-11-27 02:23 AM');
+(604, '0001', 'created a new question ', '2023-11-27 02:23 AM'),
+(605, '0001', 'uploaded an assignment elearning.sql', '2023-11-28 10:53 PM'),
+(606, 'admin', 'activate school year 12 ', '2023-11-28 11:00 PM'),
+(607, 'admin', 'added new student krishna koripella', '2023-11-30 02:12 AM'),
+(608, 'admin', 'added new student aa bb', '2023-11-30 02:19 AM'),
+(609, 'admin', 'deleted announcement 22 ', '2023-11-30 04:55 AM'),
+(610, 'admin', 'deleted student 20230022', '2023-11-30 05:45 PM'),
+(611, 'admin', 'created class VISUALIZATION-0001-2022-2023', '2023-11-30 12:00 PM'),
+(612, 'admin', 'created class Database Management-0001-2022-2023', '2023-11-30 12:00 PM'),
+(613, 'admin', 'created class Database Management-0002-2022-2023', '2023-11-30 12:02 PM'),
+(614, 'admin', 'created class Software Engineering-0004-2022-2023', '2023-11-30 12:02 PM'),
+(615, 'admin', 'created class Machine Learning-0005-2022-2023', '2023-11-30 12:02 PM'),
+(616, 'admin', 'deleted class 43', '2023-11-30 12:02 PM'),
+(617, '0005', 'created class Machine Learning-0005-2022-2023', '2023-11-30 12:03 PM'),
+(618, 'admin', 'added student to class 44', '2023-11-30 12:03 PM'),
+(619, 'admin', 'added student to class 44', '2023-11-30 12:04 PM'),
+(620, 'admin', 'added student to class 44', '2023-11-30 12:04 PM'),
+(621, 'admin', 'added student to class 44', '2023-11-30 12:04 PM'),
+(622, 'admin', 'added student to class 44', '2023-11-30 12:04 PM'),
+(623, 'admin', 'added student to class 41', '2023-11-30 12:04 PM'),
+(624, 'admin', 'added student to class 41', '2023-11-30 12:04 PM'),
+(625, 'admin', 'added student to class 41', '2023-11-30 12:04 PM'),
+(626, 'admin', 'added student to class 41', '2023-11-30 12:04 PM'),
+(627, 'admin', 'added student to class 41', '2023-11-30 12:04 PM'),
+(628, 'admin', 'added student to class 40', '2023-11-30 12:05 PM'),
+(629, 'admin', 'added student to class 40', '2023-11-30 12:05 PM'),
+(630, 'admin', 'added student to class 40', '2023-11-30 12:05 PM'),
+(631, 'admin', 'added student to class 40', '2023-11-30 12:05 PM'),
+(632, 'admin', 'added student to class 40', '2023-11-30 12:05 PM'),
+(633, '0001', 'deleted announcement 21 ', '2023-11-30 12:06 PM'),
+(634, '0001', 'added student to class 39', '2023-11-30 12:06 PM'),
+(635, '0001', 'added student to class 39', '2023-11-30 12:06 PM'),
+(636, '0001', 'added student to class 39', '2023-11-30 12:06 PM'),
+(637, '0001', 'added student to class 39', '2023-11-30 12:06 PM'),
+(638, '0001', 'added student to class 39', '2023-11-30 12:06 PM'),
+(639, '0004', 'added student to class 42', '2023-11-30 12:07 PM'),
+(640, '0004', 'added student to class 42', '2023-11-30 12:07 PM'),
+(641, '0004', 'added student to class 42', '2023-11-30 12:07 PM'),
+(642, '0004', 'added student to class 42', '2023-11-30 12:07 PM'),
+(643, '0004', 'added student to class 42', '2023-11-30 12:07 PM'),
+(644, '0004', 'added student to class 42', '2023-11-30 12:07 PM'),
+(645, '0004', 'added student to class 42', '2023-11-30 12:08 PM'),
+(646, '0004', 'added student to class 42', '2023-11-30 12:08 PM'),
+(647, '0004', 'added student to class 42', '2023-11-30 12:08 PM'),
+(648, '0004', 'added student to class 42', '2023-11-30 12:08 PM'),
+(649, '0001', 'uploaded an assignment report (1).csv', '2023-11-30 12:09 PM'),
+(650, '0001', 'created a new quiz ', '2023-11-30 12:09 PM'),
+(651, '0001', 'edited a quiz SQL', '2023-11-30 12:09 PM'),
+(652, '0001', 'created a new question ', '2023-11-30 12:09 PM'),
+(653, '0001', 'created a new question ', '2023-11-30 12:10 PM'),
+(654, 'admin', 'edited admin admin  ', '2023-11-30 12:11 PM'),
+(655, 'admin', 'edited admin admin admin', '2023-11-30 12:11 PM'),
+(656, 'admin', 'posted a new announcement ', '2023-11-30 12:12 PM'),
+(657, '0001', 'posted a new announcement ', '2023-11-30 12:13 PM'),
+(658, 'admin', 'added student to class 40', '2023-11-30 01:46 PM'),
+(659, '0001', 'uploaded an assignment MicrosoftTeams-image.png', '2023-11-30 01:54 PM'),
+(660, '0001', 'created a new quiz ', '2023-11-30 01:55 PM'),
+(661, '0001', 'created a new question ', '2023-11-30 01:55 PM');
 
 -- --------------------------------------------------------
 
@@ -206,8 +263,8 @@ CREATE TABLE `tbl_announcement` (
 --
 
 INSERT INTO `tbl_announcement` (`ID`, `TITLE`, `CONTENT`, `USER_ID`, `CLASS`, `DATE`) VALUES
-(21, 'BLACK FRIDAY HOLIDAY', 'COLLEGE HOLIDAY', 'admin', 'All', '2023-11-27 02:22 AM'),
-(22, 'CALCULUS STUDENTS', 'WELCOME FIRST CLASS', '0001', '33', '2023-11-27 02:23 AM');
+(23, 'BLACK FRIDAY HOLIDAY', 'NO CLASSES TODAY', 'admin', 'All', '2023-11-30 12:12 PM'),
+(24, 'NEXT WEEK EXAM', 'FINAL EXAM', '0001', '40', '2023-11-30 12:13 PM');
 
 -- --------------------------------------------------------
 
@@ -247,7 +304,8 @@ CREATE TABLE `tbl_assignment` (
 --
 
 INSERT INTO `tbl_assignment` (`ID`, `TITLE`, `DESCRIPTION`, `UPLOADER`, `CLASS_ID`, `FILE_NAME`, `PATH`, `DATE`) VALUES
-(13, 'MATHS', 'BASIC OPERATIONS', '0001', '33', 'report (1).csv', '../uploads/report (1).csv', '2023-11-27 02:22 AM');
+(16, 'HW1', 'Home work on Tableau', '0001', '39', 'MicrosoftTeams-image.png', '../uploads/MicrosoftTeams-image.png', '2023-11-30 01:54 PM'),
+(15, 'DATABASE QUERIES', 'SQL', '0001', '40', 'report (1).csv', '../uploads/report (1).csv', '2023-11-30 12:09 PM');
 
 -- --------------------------------------------------------
 
@@ -270,11 +328,11 @@ CREATE TABLE `tbl_class` (
 --
 
 INSERT INTO `tbl_class` (`CLASS_ID`, `CLASS_CODE`, `SUBJECT_ID`, `FACULTY_ID`, `SCHOOL_YEAR_ID`, `SEMESTER`, `DATE`) VALUES
-(37, 'Artificial Intelligence-0004-2017-2018', 29, '0004', '8', '0', '2023-11-27 02:18 AM'),
-(36, 'Database Management-0003-2017-2018', 21, '0003', '8', '0', '2023-11-27 02:18 AM'),
-(35, 'VISUALIZATION-0005-2017-2018', 26, '0005', '8', '0', '2023-11-27 02:17 AM'),
-(34, 'C PROGRAMMING-0002-2017-2018', 13, '0002', '8', '0', '2023-11-27 02:17 AM'),
-(33, 'CALCULUS-0001-2017-2018', 14, '0001', '8', '0', '2023-11-27 02:16 AM');
+(44, 'Machine Learning-0005-2022-2023', 33, '0005', '12', '0', '2023-11-30 12:03 PM'),
+(42, 'Software Engineering-0004-2022-2023', 25, '0004', '12', '0', '2023-11-30 12:02 PM'),
+(41, 'Database Management-0002-2022-2023', 21, '0002', '12', '0', '2023-11-30 12:02 PM'),
+(40, 'Database Management-0001-2022-2023', 21, '0001', '12', '0', '2023-11-30 12:00 PM'),
+(39, 'VISUALIZATION-0001-2022-2023', 26, '0001', '12', '0', '2023-11-30 12:00 PM');
 
 -- --------------------------------------------------------
 
@@ -293,30 +351,37 @@ CREATE TABLE `tbl_class_student` (
 --
 
 INSERT INTO `tbl_class_student` (`CLASS_STUDENT_ID`, `CLASS_ID`, `STUDENT_ID`) VALUES
-(80, '33', '20230003'),
-(81, '33', '20230001'),
-(82, '33', '20230002'),
-(83, '33', '20230010'),
-(84, '33', '20230011'),
-(85, '34', '20230001'),
-(86, '34', '20230010'),
-(87, '34', '20230003'),
-(88, '34', '20230002'),
-(89, '34', '20230011'),
-(90, '35', '20230007'),
-(91, '35', '20230008'),
-(92, '35', '20230009'),
-(93, '36', '20230012'),
-(94, '36', '20230004'),
-(95, '36', '20230005'),
-(96, '36', '20230006'),
-(97, '37', '20230004'),
-(98, '37', '20230005'),
-(99, '37', '20230006'),
-(100, '37', '20230012'),
-(101, '38', '20230007'),
-(102, '38', '20230008'),
-(103, '38', '20230009');
+(134, '40', '20230021'),
+(133, '42', '20230008'),
+(132, '42', '20230017'),
+(131, '42', '20230009'),
+(130, '42', '20230016'),
+(129, '42', '20230013'),
+(128, '42', '20230015'),
+(127, '42', '20230014'),
+(126, '42', '20230012'),
+(125, '42', '20230011'),
+(124, '42', '20230010'),
+(123, '39', '20230020'),
+(122, '39', '20230019'),
+(121, '39', '20230018'),
+(120, '39', '20230017'),
+(119, '39', '20230016'),
+(118, '40', '20230009'),
+(117, '40', '20230008'),
+(116, '40', '20230007'),
+(115, '40', '20230006'),
+(114, '40', '20230005'),
+(113, '41', '20230007'),
+(112, '41', '20230006'),
+(111, '41', '20230005'),
+(110, '41', '20230004'),
+(109, '41', '20230003'),
+(108, '44', '20230005'),
+(107, '44', '20230004'),
+(106, '44', '20230003'),
+(105, '44', '20230002'),
+(104, '44', '20230001');
 
 -- --------------------------------------------------------
 
@@ -328,7 +393,7 @@ CREATE TABLE `tbl_faculty` (
   `FACULTY_ID` varchar(30) NOT NULL,
   `FIRST_NAME` varchar(30) NOT NULL,
   `LAST_NAME` varchar(30) NOT NULL,
-  `PASSWORD` varchar(30) NOT NULL,
+  `PASSWORD` varchar(120) NOT NULL,
   `IMAGE` text DEFAULT NULL,
   `STATUS` varchar(11) NOT NULL,
   `DATE` varchar(20) NOT NULL
@@ -339,13 +404,12 @@ CREATE TABLE `tbl_faculty` (
 --
 
 INSERT INTO `tbl_faculty` (`FACULTY_ID`, `FIRST_NAME`, `LAST_NAME`, `PASSWORD`, `IMAGE`, `STATUS`, `DATE`) VALUES
-('0001', 'Josie', 'English', '0001', NULL, 'Registered', '2023-11-26 04:24 AM'),
-('0002', 'Lacie', 'Bradley', '0002', NULL, 'Registered', '2023-11-26 04:24 AM'),
-('0003', 'Kitty', 'Mathis', '0003', NULL, 'Registered', '2023-11-26 04:25 AM'),
-('0004', 'Lara', 'Alexander', '0004', NULL, 'Registered', '2023-11-26 04:27 AM'),
-('0005', 'Lucie', 'Mullen', '0005', NULL, 'Registered', '2023-11-26 04:28 AM'),
-('0006', 'Julius', 'Coleman', '0006', NULL, 'Registered', '2023-11-26 04:28 AM'),
-('0007', 'Ellie', 'Washington', '0007', NULL, 'Registered', '2023-11-26 04:29 AM');
+('0004', 'lokesh', 'kumar', '$2y$10$4RQCPAjzpnEw8WIA/Lr9v.QivNnbWVgR0m45RRW6wDmLCM.UMpk5a', NULL, 'Registered', '2023-11-30 11:59 AM'),
+('0003', 'lary', 'alexander', '$2y$10$50lkW/VI4uYmD0czzx8LfuU6BmVWCl0HPSy8SQ.wRYsQFHyRtYD.O', NULL, 'Registered', '2023-11-30 11:58 AM'),
+('0002', 'hrutika', 'jinna', '$2y$10$qCH27fn.pKTqYMSbRfwNMecyntgKEzmwHE0BzORHn6R4m6/vbq09i', NULL, 'Registered', '2023-11-30 11:57 AM'),
+('0001', 'lucy', 'nwosu', '$2y$10$xc2q.BWg4XnJZi.QqDRyEO6nP2HJOlk12Z9/3c3E3quuwzVpXjrz6', NULL, 'Registered', '2023-11-30 11:57 AM'),
+('0005', 'harikesh', 'kumar', '$2y$10$IDUr0ortSc/30axRMqB0e.ftFj0hU2.4sWamjn092cgMQN88hAJty', NULL, 'Registered', '2023-11-30 11:59 AM'),
+('0006', 'Lokanand', 'Raja', '$2y$10$0/2uyal77ZWzDwoEZQe/iOYep/EiC63sm39J5ItBiK.fKnaWL78di', NULL, 'Registered', '2023-11-30 01:52 PM');
 
 -- --------------------------------------------------------
 
@@ -370,7 +434,9 @@ CREATE TABLE `tbl_questions` (
 --
 
 INSERT INTO `tbl_questions` (`ID`, `QUIZ_ID`, `QUESTION`, `CHOICES_A`, `CHOICES_B`, `CHOICES_C`, `CHOICES_D`, `ANSWER`, `DATE`) VALUES
-(10, 3, '2 3', '5', '6', '7', '8', 'A', '2023-11-27 02:23 AM');
+(11, 4, 'SELECT', 'A', 'B', 'C', 'D', 'A', '2023-11-30 12:09 PM'),
+(12, 4, 'INSERT', 'A', 'B', 'C', 'D', 'B', '2023-11-30 12:10 PM'),
+(13, 5, 'How do you like our app', 'Excellent', 'Good', 'Average', 'Can do Better?', 'A', '2023-11-30 01:55 PM');
 
 -- --------------------------------------------------------
 
@@ -391,7 +457,8 @@ CREATE TABLE `tbl_quizes` (
 --
 
 INSERT INTO `tbl_quizes` (`ID`, `QUIZ_TITLE`, `CLASS_ID`, `TEACHER_ID`, `DATE`) VALUES
-(3, 'BASIC OPERATIONS', 33, 1, '2023-11-27 02:23 AM');
+(4, 'SQL', 40, 1, '2023-11-30 12:09 PM'),
+(5, 'QUIZ 1', 39, 1, '2023-11-30 01:55 PM');
 
 -- --------------------------------------------------------
 
@@ -407,6 +474,14 @@ CREATE TABLE `tbl_quiz_status` (
   `SCORE` varchar(30) NOT NULL,
   `STATUS` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_quiz_status`
+--
+
+INSERT INTO `tbl_quiz_status` (`ID`, `QUIZ_ID`, `STUDENT_ID`, `ITEMS`, `SCORE`, `STATUS`) VALUES
+(1, 5, 20230020, '1', '1', 'Done'),
+(2, 4, 20230009, '2', '1', 'Done');
 
 -- --------------------------------------------------------
 
@@ -428,9 +503,9 @@ CREATE TABLE `tbl_school_yr` (
 INSERT INTO `tbl_school_yr` (`ID`, `SCHOOL_YEAR`, `STATUS`, `DATE`) VALUES
 (10, '2020-2021', 'INACTIVE', '2023-11-26 12:36 AM'),
 (9, '2018-2019', 'INACTIVE', '2023-11-26 12:36 AM'),
-(8, '2017-2018', 'ACTIVE', '2023-11-26 12:35 AM'),
+(8, '2017-2018', 'INACTIVE', '2023-11-26 12:35 AM'),
 (11, '2019-2020', 'INACTIVE', '2023-11-26 12:36 AM'),
-(12, '2022-2023', 'INACTIVE', '2023-11-26 06:45 PM');
+(12, '2022-2023', 'ACTIVE', '2023-11-26 06:45 PM');
 
 -- --------------------------------------------------------
 
@@ -446,7 +521,7 @@ CREATE TABLE `tbl_student` (
   `DOB` date DEFAULT NULL,
   `COURSE` varchar(30) NOT NULL,
   `PROGRAM` varchar(20) NOT NULL,
-  `PASSWORD` varchar(30) NOT NULL,
+  `PASSWORD` varchar(120) NOT NULL,
   `IMAGE` text DEFAULT NULL,
   `STATUS` varchar(11) NOT NULL,
   `DATE` varchar(20) NOT NULL
@@ -457,18 +532,27 @@ CREATE TABLE `tbl_student` (
 --
 
 INSERT INTO `tbl_student` (`STUDENT_ID`, `FIRST_NAME`, `LAST_NAME`, `MOBILE`, `DOB`, `COURSE`, `PROGRAM`, `PASSWORD`, `IMAGE`, `STATUS`, `DATE`) VALUES
-('20230003', 'MOHANA KRISHNA', 'KORIPELLA', '08128368725', '1999-12-20', 'CSE', 'Graduate', '20230003', NULL, 'Registered', '2023-11-27 02:03 AM'),
-('20230002', 'HRUTHIKA', 'JINNA', '08213273123', '1999-11-23', 'CSE', 'Graduate', '20230002', NULL, 'Registered', '2023-11-27 02:02 AM'),
-('20230001', 'LUCY', 'NWOSU', '08127351821', '1998-11-04', 'CSE', 'Graduate', '20230001', NULL, 'Registered', '2023-11-27 02:00 AM'),
-('20230004', 'Samarasimha Reddy', 'Punnam', '07912846317', '1999-06-16', 'IT', 'Graduate', '20230004', NULL, 'Registered', '2023-11-27 02:04 AM'),
-('20230005', 'Vinay Kumar Reddy', 'Eda', '01294896132', '1999-02-10', 'IT', 'Undergraduate', '20230005', NULL, 'Registered', '2023-11-27 02:06 AM'),
-('20230006', 'Sudheer', 'Pattamsetti', '02918431376', '1998-06-10', 'IT', 'Graduate', '20230006', NULL, 'Registered', '2023-11-27 02:06 AM'),
-('20230007', 'Bharath', 'Thoranala', '01290438276', '1998-06-02', 'DS', 'Undergraduate', '20230007', NULL, 'Registered', '2023-11-27 02:07 AM'),
-('20230009', 'Vardhan', 'Patani', '01297439818', '1999-02-18', 'DS', 'Undergraduate', '20230009', NULL, 'Registered', '2023-11-27 02:09 AM'),
-('20230008', 'Surya Pavan', 'Peruri', '19408439415', '1999-12-27', 'DS', 'Undergraduate', '20230008', NULL, 'Registered', '2023-11-27 02:10 AM'),
-('20230010', 'Harikesh', 'Govindaiahgari', '01298317626', '2000-02-16', 'CSE', 'Graduate', '20230010', NULL, 'Registered', '2023-11-27 02:12 AM'),
-('20230011', 'Nagendra', 'Palugulla', '08172375168', '2000-07-11', 'CSE', 'Graduate', '20230011', NULL, 'Registered', '2023-11-27 02:13 AM'),
-('20230012', 'Tharun', 'Pasham', '0129837156', '1999-08-11', 'IT', 'Undergraduate', '20230012', NULL, 'Registered', '2023-11-27 02:14 AM');
+('20230010', 'tharun', 'pasham', '07137618762', '1999-12-02', 'DS', 'Graduate', '$2y$10$IAP.VU2E2kcjpmPN5tcgluOeKvcWd7ku0hDWw1.aIaaG/DmpI8Xc2', NULL, 'Registered', '2023-11-30 11:40 AM'),
+('20230009', 'sai', 'harsha', '02381827187', '1999-04-05', 'DS', 'Graduate', '$2y$10$kbR3RGuju8K7A7Pt3FGfZuD1rPe5FRhkK07PvTXEgsCLba.tUPnpa', NULL, 'Registered', '2023-11-30 11:38 AM'),
+('20230008', 'hari', 'krishna', '16812361982', '1999-07-02', 'CSE', 'Undergraduate', '$2y$10$v67.FJwqesYF5HjNivLqpuZPzA7f5HRrpgBmRYdkcFOPgeiixVMsa', NULL, 'Registered', '2023-11-30 11:38 AM'),
+('20230007', 'surya', 'peruri', '09128735167', '1999-06-07', 'CSE', 'Graduate', '$2y$10$rvKJc.r8EFZR8u6W8/6V7OdpsMkTii6wmVpMqt10XaPVeltebA1BC', NULL, 'Registered', '2023-11-30 11:36 AM'),
+('20230006', 'vardhan', 'patani', '07817234521', '1999-07-08', 'DS', 'Undergraduate', '$2y$10$jxKp1h3NOQcMksrMSsaIhuJeyB7oj60MQmrFSZE/zlYFeT5JDlGpS', NULL, 'Registered', '2023-11-30 11:35 AM'),
+('20230005', 'bharath', 'thoranala', '09273812761', '1999-07-18', 'DS', 'Graduate', '$2y$10$y4BBlS1fOdVgx/8BcmzVveoouwTaEU31MiRzXmf23JTUZYQZkM7.2', NULL, 'Registered', '2023-11-30 11:35 AM'),
+('20230004', 'sudheer', 'pattamsetti', '09231874581', '1999-01-09', 'IT', 'Undergraduate', '$2y$10$5Jf8UzvGKdOS1YuvSu.RFuRpPk/n2bGkj3QjvP3w6uCHydDaOZL.O', NULL, 'Registered', '2023-11-30 11:33 AM'),
+('20230003', 'vinay', 'eda', '09217352187', '1999-02-03', 'CSE', 'Undergraduate', '$2y$10$BHDywSzPy/0L/NsTPpHVAubA1jaCRT6d.dfXSBxish3Nz.xTcrkJ.', NULL, 'Registered', '2023-11-30 11:32 AM'),
+('20230001', 'krishna', 'koripella', '09187351276', '1999-10-26', 'CSE', 'Graduate', '$2y$10$dpB8bzW89R3jgX3U6TX1FOo754/KdFhx1Opwtzwru07XyOv1PqLLK', NULL, 'Registered', '2023-11-30 11:31 AM'),
+('20230002', 'samara', 'punnam', '08819362172', '1999-09-18', 'IT', 'Graduate', '$2y$10$EcPOZNhDsFO6a.rHYT9v0O5vH7gTmWTgUjfHBb1mb7uAERSPMiUWe', NULL, 'Registered', '2023-11-30 11:31 AM'),
+('20230011', 'nagendra', 'palugula', '09267134517', '1999-11-12', 'DS', 'Undergraduate', '$2y$10$qIRrCspLfBwplgi8BrzKWuiLi9UkN9oxOseczt.hJL65I1gW.8cne', NULL, 'Registered', '2023-11-30 11:40 AM'),
+('20230012', 'mukush', 'kumar', '02189361278', '1999-01-01', 'IT', 'Undergraduate', '$2y$10$qpKyn1P9zmZ7x3GVaSuCAel3gOla9UcXlhpomEMlccwtAgCn6fJL2', NULL, 'Registered', '2023-11-30 11:41 AM'),
+('20230013', 'nikhil', 'singh', '07613212317', '1999-07-08', 'CSE', 'Graduate', '$2y$10$MTPqj9WIAXE40bJJhYONCu2e4VZIDSZyexS5xSgid88VPjwP.s6ua', NULL, 'Registered', '2023-11-30 11:49 AM'),
+('20230014', 'harshith', 'koppaka', '06123517271', '1999-02-01', 'DS', 'Graduate', '$2y$10$TL7JrAoR0eJBJp0LJQs/5uAGCmyrrJ56J8l1wjIUYuXySuEEzs7xS', NULL, 'Registered', '2023-11-30 11:50 AM'),
+('20230015', 'nitin', 'sundar', '09216351827', '1999-03-03', 'DS', 'Undergraduate', '$2y$10$eKtfGZ.I85RPVLyZgZNaEe36t0hyJH/MiXBpyScp/.sJNUuKB2Smq', NULL, 'Registered', '2023-11-30 11:50 AM'),
+('20230016', 'ritheesh', 'reddy', '08126381781', '1999-09-09', 'IT', 'Undergraduate', '$2y$10$J2LIZPi02ACv82C9xIFNDeg2g7XNvCT8pbQu3iJr6NDJbqJsZqpSO', NULL, 'Registered', '2023-11-30 11:51 AM'),
+('20230017', 'avinash', 'simha', '08182317622', '2000-01-09', 'IT', 'Graduate', '$2y$10$0BcoFzuR5tfvIIxOlPkEz.yHpZp4U6PRlHwKAlvMbw2t9Nn/ujt4K', NULL, 'Registered', '2023-11-30 11:52 AM'),
+('20230018', 'rahul', 'krishna', '05128361891', '2000-04-05', 'CSE', 'Undergraduate', '$2y$10$FT4TLNh66h0GAxqc5LvNMOociGXQpLFEk1X2WdNE7LSaeL7Wg7ayy', NULL, 'Registered', '2023-11-30 11:53 AM'),
+('20230019', 'raja', 'reddy', '09128735182', '1998-08-07', 'IT', 'Undergraduate', '$2y$10$Se5CSiNwPiaehZkXxp2TdOZSe5qOLCn9pra025kmYizsfYZ0aZ0gu', NULL, 'Registered', '2023-11-30 11:54 AM'),
+('20230020', 'ram', 'teja', '08162361722', '1998-06-06', 'IT', 'Undergraduate', '$2y$10$ka844v4whVN7a1xwkZPRnOEGsnvvK5qIJVlehvsDjkvtCCFSbjch2', NULL, 'Registered', '2023-11-30 11:55 AM'),
+('20230021', 'Hari', 'Prasad', '07776665552', '2023-08-09', 'DS', 'Graduate', '$2y$10$4RJQ.BwXQMlz9f3RTmYnRuYOTo1E5uNw3DB8t5Mhb8o6KDW7yA6SK', NULL, 'Registered', '2023-11-30 01:44 PM');
 
 -- --------------------------------------------------------
 
@@ -534,7 +618,7 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`USER_ID`, `FIRST_NAME`, `LAST_NAME`, `PASSWORD`, `DATE`) VALUES
-('admin', 'admin', 'admin', 'admin', '2019-05-17 08:03 PM'),
+('admin', 'admin', 'admin', 'admin', '2023-11-30 12:11 PM'),
 ('admin1', 'admin1', 'admin1', 'admin1', '2023-11-26 12:34 AM'),
 ('admin2', 'admin2', 'admin2', 'admin2', '2023-11-26 06:13 PM');
 
@@ -631,7 +715,89 @@ INSERT INTO `tbl_user_log` (`ID`, `USER_ID`, `DATE`) VALUES
 (362, 'admin', '2023-11-27 12:06 AM'),
 (363, 'admin', '2023-11-27 12:54 AM'),
 (364, '0001', '2023-11-27 02:22 AM'),
-(365, '20230002', '2023-11-27 02:24 AM');
+(365, '20230002', '2023-11-27 02:24 AM'),
+(366, 'admin', '2023-11-28 10:22 PM'),
+(367, '20230001', '2023-11-28 10:48 PM'),
+(368, '20230001', '2023-11-28 10:49 PM'),
+(369, '0001', '2023-11-28 10:51 PM'),
+(370, '20230001', '2023-11-28 10:55 PM'),
+(371, 'admin', '2023-11-28 10:59 PM'),
+(372, '20230020', '2023-11-30 01:13 AM'),
+(373, '20230020', '2023-11-30 01:13 AM'),
+(374, 'admin', '2023-11-30 01:14 AM'),
+(375, 'admin', '2023-11-30 01:14 AM'),
+(376, 'admin', '2023-11-30 01:14 AM'),
+(377, 'admin', '2023-11-30 01:14 AM'),
+(378, 'admin', '2023-11-30 01:14 AM'),
+(379, 'admin1', '2023-11-30 01:14 AM'),
+(380, 'admin1', '2023-11-30 01:14 AM'),
+(381, 'admin1', '2023-11-30 01:14 AM'),
+(382, 'admin1', '2023-11-30 01:14 AM'),
+(383, '20230020', '2023-11-30 01:14 AM'),
+(384, 'admin', '2023-11-30 01:20 AM'),
+(385, 'admin1', '2023-11-30 01:20 AM'),
+(386, '20230020', '2023-11-30 01:20 AM'),
+(387, '0001', '2023-11-30 01:23 AM'),
+(388, '20230001', '2023-11-30 01:23 AM'),
+(389, 'admin', '2023-11-30 01:23 AM'),
+(390, '20230020', '2023-11-30 01:24 AM'),
+(391, '20230001', '2023-11-30 01:24 AM'),
+(392, '20230002', '2023-11-30 01:25 AM'),
+(393, '20230020', '2023-11-30 01:25 AM'),
+(394, '20230020', '2023-11-30 01:26 AM'),
+(395, '20230020', '2023-11-30 01:26 AM'),
+(396, '20230001', '2023-11-30 01:26 AM'),
+(397, 'admin', '2023-11-30 01:27 AM'),
+(398, 'admin', '2023-11-30 02:05 AM'),
+(399, '20230001', '2023-11-30 02:05 AM'),
+(400, '20230020', '2023-11-30 02:06 AM'),
+(401, '20230020', '2023-11-30 02:06 AM'),
+(402, '0020', '2023-11-30 02:06 AM'),
+(403, '0020', '2023-11-30 02:07 AM'),
+(404, 'admin', '2023-11-30 02:07 AM'),
+(405, 'admin', '2023-11-30 02:07 AM'),
+(406, 'admin', '2023-11-30 02:07 AM'),
+(407, 'admin', '2023-11-30 02:08 AM'),
+(408, '20230020', '2023-11-30 02:09 AM'),
+(409, '20230020', '2023-11-30 02:09 AM'),
+(410, 'admin', '2023-11-30 02:10 AM'),
+(411, '20230021', '2023-11-30 02:12 AM'),
+(412, 'admin', '2023-11-30 02:14 AM'),
+(413, '20230022', '2023-11-30 02:20 AM'),
+(414, 'admin', '2023-11-30 02:22 AM'),
+(415, '20230001', '2023-11-30 02:23 AM'),
+(416, '20230022', '2023-11-30 02:23 AM'),
+(417, '20230022', '2023-11-30 02:23 AM'),
+(418, 'admin', '2023-11-30 04:53 AM'),
+(419, 'admin', '2023-11-30 06:27 AM'),
+(420, 'admin', '2023-11-30 05:43 PM'),
+(421, 'admin', '2023-11-30 11:19 AM'),
+(422, 'admin', '2023-11-30 12:00 PM'),
+(423, '0005', '2023-11-30 12:03 PM'),
+(424, 'admin', '2023-11-30 12:03 PM'),
+(425, '0001', '2023-11-30 12:05 PM'),
+(426, '0004', '2023-11-30 12:07 PM'),
+(427, '0001', '2023-11-30 12:08 PM'),
+(428, '20230005', '2023-11-30 12:10 PM'),
+(429, 'admin', '2023-11-30 12:11 PM'),
+(430, '20230001', '2023-11-30 12:12 PM'),
+(431, '0001', '2023-11-30 12:12 PM'),
+(432, '20230005', '2023-11-30 12:13 PM'),
+(433, 'admin', '2023-11-30 12:14 PM'),
+(434, '0002', '2023-11-30 12:14 PM'),
+(435, 'admin', '2023-11-30 01:45 PM'),
+(436, '20230021', '2023-11-30 01:48 PM'),
+(437, '20230021', '2023-11-30 01:48 PM'),
+(438, '0006', '2023-11-30 01:52 PM'),
+(439, '0006', '2023-11-30 01:52 PM'),
+(440, '0001', '2023-11-30 01:53 PM'),
+(441, '0001', '2023-11-30 01:54 PM'),
+(442, '20230020', '2023-11-30 01:56 PM'),
+(443, '20230004', '2023-11-30 02:00 PM'),
+(444, '20230009', '2023-11-30 02:01 PM'),
+(445, '0001', '2023-11-30 02:03 PM'),
+(446, '20230009', '2023-11-30 02:03 PM'),
+(447, '0001', '2023-11-30 02:04 PM');
 
 --
 -- Indexes for dumped tables
@@ -735,13 +901,13 @@ ALTER TABLE `tbl_user_log`
 -- AUTO_INCREMENT for table `tbl_activity_log`
 --
 ALTER TABLE `tbl_activity_log`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=605;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=662;
 
 --
 -- AUTO_INCREMENT for table `tbl_announcement`
 --
 ALTER TABLE `tbl_announcement`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `tbl_answers`
@@ -753,37 +919,37 @@ ALTER TABLE `tbl_answers`
 -- AUTO_INCREMENT for table `tbl_assignment`
 --
 ALTER TABLE `tbl_assignment`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_class`
 --
 ALTER TABLE `tbl_class`
-  MODIFY `CLASS_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `CLASS_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `tbl_class_student`
 --
 ALTER TABLE `tbl_class_student`
-  MODIFY `CLASS_STUDENT_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `CLASS_STUDENT_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT for table `tbl_questions`
 --
 ALTER TABLE `tbl_questions`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_quizes`
 --
 ALTER TABLE `tbl_quizes`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tbl_quiz_status`
 --
 ALTER TABLE `tbl_quiz_status`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_school_yr`
@@ -801,7 +967,7 @@ ALTER TABLE `tbl_subject`
 -- AUTO_INCREMENT for table `tbl_user_log`
 --
 ALTER TABLE `tbl_user_log`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=366;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=448;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
