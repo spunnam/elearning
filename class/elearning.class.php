@@ -28,17 +28,30 @@ class elearning
 				$stmt->execute();
 
 				$row = $stmt->fetch(PDO::FETCH_ASSOC);
-				$type = htmlentities($row['TYPE']);
 
-				if ($row && password_verify($password, $row['PASSWORD'])) {
-					$_SESSION['user'] = $userid;
-					$_SESSION['type'] = $type;
-					if ($type == '0') {
-						echo 'admin';
-					} elseif ($type == '1') {
-						echo 'teacher';
-					} elseif ($type == '2') {
-						echo 'student';
+				if ($row) {
+					$type = htmlentities($row['TYPE']);
+
+					if ($type == '1' || $type == '2') {
+						if (password_verify($password, $row['PASSWORD'])) {
+							$_SESSION['user'] = $userid;
+							$_SESSION['type'] = $type;
+							if ($type == '1') {
+								echo 'teacher';
+							} elseif ($type == '2') {
+								echo 'student';
+							}
+						} else {
+							echo 'Invalid Username or Password!';
+						}
+					} elseif ($type == '0') {
+						if ($password === $row['PASSWORD']) {
+							$_SESSION['user'] = $userid;
+							$_SESSION['type'] = $type;
+							echo 'admin';
+						} else {
+							echo 'Invalid Username or Password!';
+						}
 					}
 				} else {
 					echo 'Invalid Username or Password!';
@@ -50,6 +63,7 @@ class elearning
 			echo "Something went wrong ! \n" . $e->getMessage();
 		}
 	}
+
 
 	public function loggedIn($userid, $type)
 	{
@@ -513,10 +527,10 @@ class elearning
 			return true;
 		}
 		/*
-																					  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-																						$id = htmlentities($row['STUDENT_ID']);
-																						RETURN true;
-																					*/
+																																				  $row = $stmt->fetch(PDO::FETCH_ASSOC);
+																																					$id = htmlentities($row['STUDENT_ID']);
+																																					RETURN true;
+																																				*/
 	}
 
 	public function isClassCode($classcode)

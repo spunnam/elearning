@@ -701,10 +701,9 @@ function cpStudent(e){
 	var mobile = document.getElementById('mobile').value;
 	var dob = document.getElementById('dob').value;
 	var course = document.getElementById('course').value;
-	var course = document.getElementById('course').value;
-	var program = document.getElementById('program').value;
+	var pass = document.getElementById('password').value;
 	var cpass = document.getElementById('confirmPassword').value;
-	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&dob="+dob+"&course="+course+"&program="+program+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
+	var param = "userid="+userid+"&fname="+fname+"&lname="+lname+"&mobile="+mobile+"&dob="+dob+"&course="+course+"&password="+pass+"&confirm-password="+cpass+"&action="+action;
 	
 	var xhr = new XMLHttpRequest();
 	xhr.open('POST', '../class/elearning.condition.php', true);

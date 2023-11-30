@@ -2,7 +2,9 @@
 
 <!-- DIRECTORY -->
 <div class="main-dir">
-	<h1><?php echo ucwords($userName); ?></h1>
+	<h1>
+		<?php echo ucwords($userName); ?>
+	</h1>
 </div>
 <!-- END DIRECTORY -->
 
