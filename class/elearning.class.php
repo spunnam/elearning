@@ -527,10 +527,10 @@ class elearning
 			return true;
 		}
 		/*
-																																				  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-																																					$id = htmlentities($row['STUDENT_ID']);
-																																					RETURN true;
-																																				*/
+																																						$row = $stmt->fetch(PDO::FETCH_ASSOC);
+																																						  $id = htmlentities($row['STUDENT_ID']);
+																																						  RETURN true;
+																																					  */
 	}
 
 	public function isClassCode($classcode)
@@ -971,10 +971,11 @@ class elearning
 	public function getStudentQuizes($id, $user)
 	{
 		try {
-
-			$stmt = $this->DB->prepare("SELECT * FROM tbl_quizes WHERE ID NOT IN (SELECT QUIZ_ID FROM tbl_quiz_status WHERE STUDENT_ID = $user) AND CLASS_ID = $id");
-			$stmt->bindValue(':id', $id);
+			$stmt = $this->DB->prepare("SELECT * FROM tbl_quizes WHERE ID NOT IN (SELECT QUIZ_ID FROM tbl_quiz_status WHERE STUDENT_ID = :user) AND CLASS_ID = :id");
+			$stmt->bindParam(':id', $id, PDO::PARAM_INT);
+			$stmt->bindParam(':user', $user, PDO::PARAM_INT);
 			$stmt->execute();
+
 			while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 				$sid = htmlentities($row['ID']);
 				$quiz = htmlentities($row['QUIZ_TITLE']);
