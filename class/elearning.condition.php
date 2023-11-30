@@ -1,7 +1,7 @@
 <?php
 SESSION_START();
 error_reporting(0);
-date_default_timezone_set('Africa/Tunis');
+date_default_timezone_set('America/Chicago');
 include_once '../class/elearning.class.php';
 
 $user = $_SESSION['user'];
