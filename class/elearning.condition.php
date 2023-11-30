@@ -14,13 +14,14 @@ $activeSY = $el->getSchoolYear();
 
 if ($_POST['action'] == "login") {
 	$userid = htmlspecialchars($_POST["userid"]);
-	$password = htmlspecialchars($_POST["password"]);
+	$entered_password = htmlspecialchars($_POST["password"]);
 
-	$el->getUserCredentials($userid, $password);
+	$el->getUserCredentials($userid, $entered_password);
 	$el->setUserLog($userid, $date);
 }
 
 if ($_POST['action'] == "register-student") {
+	$hashedPassword = password_hash(htmlspecialchars($_POST["password"]), PASSWORD_BCRYPT);
 	$userid = htmlspecialchars($_POST["userid"]);
 	$fname = htmlspecialchars($_POST["fname"]);
 	$lname = htmlspecialchars($_POST["lname"]);
@@ -37,11 +38,12 @@ if ($_POST['action'] == "register-student") {
 	} elseif ($confirm_pass !== $password) {
 		echo 'Password not match!';
 	} else {
-		$el->setStudent($userid, $fname, $lname, $mobile, $dob, $course, $program, $password, $date);
+		$el->setStudent($userid, $fname, $lname, $mobile, $dob, $course, $program, $hashedPassword, $date);
 	}
 }
 
 if ($_POST['action'] == "register-faculty") {
+	$hashedFacultyPassword = password_hash(htmlspecialchars($_POST["password"]), PASSWORD_BCRYPT);
 	$userid = htmlspecialchars($_POST["userid"]);
 	$fname = htmlspecialchars($_POST["fname"]);
 	$lname = htmlspecialchars($_POST["lname"]);
@@ -53,7 +55,7 @@ if ($_POST['action'] == "register-faculty") {
 	} elseif ($confirm_pass !== $password) {
 		echo 'Password not match!';
 	} else {
-		$el->setTeacherInfo($userid, $fname, $lname, $password, $date);
+		$el->setTeacherInfo($userid, $fname, $lname, $hashedFacultyPassword, $date);
 	}
 }
 

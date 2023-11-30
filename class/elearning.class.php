@@ -18,35 +18,31 @@ class elearning
 		try {
 			if (!empty($userid) && !empty($password)) {
 				$stmt = $this->DB->prepare("SELECT USER_ID, `PASSWORD`, '0' AS TYPE FROM tbl_user
-											WHERE USER_ID = :userid AND `PASSWORD` = :password
-											UNION SELECT FACULTY_ID, `PASSWORD`, '1' AS TYPE FROM tbl_faculty
-											WHERE FACULTY_ID = :userid AND `PASSWORD` = :password
-											UNION SELECT STUDENT_ID, `PASSWORD`, '2' AS TYPE FROM tbl_student
-											WHERE STUDENT_ID = :userid AND `PASSWORD` = :password
-											ORDER BY TYPE;");
+                                        WHERE USER_ID = :userid
+                                        UNION SELECT FACULTY_ID, `PASSWORD`, '1' AS TYPE FROM tbl_faculty
+                                        WHERE FACULTY_ID = :userid
+                                        UNION SELECT STUDENT_ID, `PASSWORD`, '2' AS TYPE FROM tbl_student
+                                        WHERE STUDENT_ID = :userid
+                                        ORDER BY TYPE;");
 				$stmt->bindValue(':userid', $userid);
-				$stmt->bindValue(':password', $password);
 				$stmt->execute();
 
 				$row = $stmt->fetch(PDO::FETCH_ASSOC);
 				$type = htmlentities($row['TYPE']);
 
-				if ($type == '0') {
+				if ($row && password_verify($password, $row['PASSWORD'])) {
 					$_SESSION['user'] = $userid;
 					$_SESSION['type'] = $type;
-					echo 'admin';
-				} elseif ($type == '1') {
-					$_SESSION['user'] = $userid;
-					$_SESSION['type'] = $type;
-					echo 'teacher';
-				} elseif ($type == '2') {
-					$_SESSION['user'] = $userid;
-					$_SESSION['type'] = $type;
-					echo 'student';
+					if ($type == '0') {
+						echo 'admin';
+					} elseif ($type == '1') {
+						echo 'teacher';
+					} elseif ($type == '2') {
+						echo 'student';
+					}
 				} else {
 					echo 'Invalid Username or Password!';
 				}
-
 			} else {
 				echo 'Please Insert Username/Password!';
 			}
@@ -517,10 +513,10 @@ class elearning
 			return true;
 		}
 		/*
-															  $row = $stmt->fetch(PDO::FETCH_ASSOC);
-																$id = htmlentities($row['STUDENT_ID']);
-																RETURN true;
-															*/
+																					  $row = $stmt->fetch(PDO::FETCH_ASSOC);
+																						$id = htmlentities($row['STUDENT_ID']);
+																						RETURN true;
+																					*/
 	}
 
 	public function isClassCode($classcode)
